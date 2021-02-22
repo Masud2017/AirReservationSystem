@@ -1,0 +1,110 @@
+#include "Booking.hpp"
+#include "ticketinfostorage.hpp"
+#include "func.hpp"
+
+#include <unistd.h>
+#include <fstream>
+#include <sstream>
+
+namespace booking {
+    void Booking::scheduleTicket() {
+        system("clear");
+        ticketStorage::TicketStorage ticketStorage;
+        int option = 0;
+        int paymentOption = 0;
+
+        std::vector<std::string> ticketCollection = ticketStorage.getTicketCollection();
+
+        std::cout << "********** Book/Schedule ticket **********"<<std::endl;
+
+        for (int i = 0; i < ticketCollection.size() - 1; i++) {
+            std::cout << "["<< i+1<<"]"<< " " << ticketCollection.at(i) << std::endl;
+        }
+        std::cout << "Choose one ticket :"<<std::endl;
+        std::cin >> option;
+
+        switch(option) {
+            case 1:
+                std::cout <<"Do you want to pay the money now or later: "<<std::endl<<"Enter your choice: [1] or [2]"<<std::endl;
+                std::cin >> paymentOption;
+                std::string ticket;
+
+                if (paymentOption == 1) {
+
+                } else if (paymentOption == 2) {
+                    std::cout <<"Booking process without payment is established please wait for the confirmation... "<<std::endl;
+
+                    std::string userEmail = getCurrentUserEmail();
+                    std::ofstream ticketUserListWriter;
+                    ticketUserListWriter.open("userDb/"+userEmail+".txt",std::ios::app);
+                    int userBalance = getCurrentUserBalance();
+                    std::string tickLine;
+
+
+                    std::ifstream ticketStorageReader;
+                    ticketStorageReader.open("ticketStorage.txt");
+
+                    for (int i = 0; i < 1; i++) {
+                        getline(ticketStorageReader,tickLine);
+                    }
+                    int ticketAvailable = getAvaileAbleTicket(tickLine);
+                    int ticketPrice = getPriceTicket(tickLine);
+                    std::vector<std::string> splittedTicketLine = split(tickLine);
+                    std::string ticketName = splittedTicketLine[0];
+                    std::string date;
+                    std::cout << "Enter the date for your travle: ";
+                    std::cin >> date;
+
+                    ticketUserListWriter <<ticketName<<","<<"false"<<","<<date<<std::endl;
+
+                    ticketAvailable = ticketAvailable - 1;
+                    userBalance = userBalance - ticketPrice;
+                    std::cout<<"New balance : "<<userBalance<<std::endl;
+
+                    // We are going to update balance and ticket
+
+                    updateUserBalance(userBalance);
+
+
+
+
+
+                }
+        }
+
+        sleep(3);
+        system("clear");
+    }
+
+    void Booking::cancelBooking() {
+        // code will be placed here
+    }
+
+    int Booking::paymentVerify() {
+        // code will be placed here
+    }
+
+    void Booking::showMyTickets() {
+        system("clear");
+        std::ifstream myTickets;
+        char halt = 0;
+        myTickets.open("userDb/"+getCurrentUserEmail()+".txt");
+        std::string line;
+        std::vector<std::string> myTicketVect;
+        while (myTickets) {
+            getline(myTickets,line);
+            myTicketVect.push_back(line);
+        }
+
+        for (int i = 0; i < myTicketVect.size()-1; i++) {
+            std::vector<std::string> splittedTickVect = split(myTicketVect.at(i));
+            std::string isVerified = (splittedTickVect[1] == "true")?"Payment Verified":"Payment not verified";
+            std::cout<<splittedTickVect[0]<<" " << isVerified <<" " <<splittedTickVect[2] <<std::endl;
+        }
+        std::cin >> halt;
+
+        system("clear");
+
+    }
+}
+

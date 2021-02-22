@@ -1,0 +1,20 @@
+Dhaka to Barishal,avail=10,price=5
+Sylhet to Dhaka,avail=4,price=5
+Barishal to Dhaka,avail=5,price=7
+Dhaka to Sylhet,avail=2,price=7
+Dhaka to Chittagong,avail=3,price=10
+Chittagong to Dhaka,avail=6,price=10
+Dhaka to Kustia,avail=4,price=15
+Kustia to Dhaka,avail=6,price=10
+Dhaka to Jessior,avail=-1,price=10
+Jessior to Dhaka,avail=2,price=10
+
+
+
+
+
+
+
+
+
+

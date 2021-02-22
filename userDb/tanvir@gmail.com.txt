@@ -1,0 +1,19 @@
+
+
+Dhaka to Jessior,true,12
+Dhaka to Barishal,true,1
+Barishal to Dhaka,true,34
+Dhaka to Sylhet,true,34
+Dhaka to Chittagong,true,34
+Chittagong to Dhaka,true,3
+Jessior to Dhaka,true,34
+
+Dhaka to Jessior,true,34
+Dhaka to Jessior,true,2
+
+
+
+
+
+Dhaka to Kustia,false,20
+Chittagong to Dhaka,false,21

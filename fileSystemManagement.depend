@@ -1,0 +1,118 @@
+# depslib dependency file v1.0
+1611603882 source:/home/unroot/Desktop/cleaning/Junks/learning/project/flightSystem/fileSystemManagement/login.cpp
+	"login.hpp"
+	<fstream>
+	<vector>
+	"menu.hpp"
+
+1611599448 /home/unroot/Desktop/cleaning/Junks/learning/project/flightSystem/fileSystemManagement/login.hpp
+	<iostream>
+
+1613967110 source:/home/unroot/Desktop/cleaning/Junks/learning/project/flightSystem/fileSystemManagement/main.cpp
+	<iostream>
+	"registration.hpp"
+	"customer.hpp"
+	"menu.hpp"
+	"auth.hpp"
+	"ticketinfostorage.hpp"
+
+1611539172 /home/unroot/Desktop/cleaning/Junks/learning/project/flightSystem/fileSystemManagement/storage.hpp
+	<iostream>
+
+1613846718 source:/home/unroot/Desktop/cleaning/Junks/learning/project/flightSystem/fileSystemManagement/registration.cpp
+	"registration.hpp"
+	<iostream>
+	<fstream>
+	"func.hpp"
+
+1611537510 source:/home/unroot/Desktop/cleaning/Junks/learning/project/flightSystem/fileSystemManagement/storage.cpp
+	"storage.hpp"
+	<iostream>
+	<fstream>
+	<filesystem>
+	<string>
+
+1613786655 source:/home/unroot/Desktop/cleaning/Junks/learning/project/flightSystem/fileSystemManagement/customer.cpp
+	"customer.hpp"
+	<sstream>
+
+1611539821 /home/unroot/Desktop/cleaning/Junks/learning/project/flightSystem/fileSystemManagement/customer.hpp
+	<iostream>
+
+1613789162 /home/unroot/Desktop/cleaning/Junks/learning/project/flightSystem/fileSystemManagement/registration.hpp
+	"customer.hpp"
+	<fstream>
+	"func.hpp"
+
+1613792664 /home/unroot/Desktop/cleaning/Junks/learning/project/flightSystem/fileSystemManagement/menu.hpp
+
+1614002418 source:/home/unroot/Desktop/cleaning/Junks/learning/project/flightSystem/fileSystemManagement/menu.cpp
+	"menu.hpp"
+	<stdlib.h>
+	<iostream>
+	<unistd.h>
+	"auth.hpp"
+	"otherDisp.hpp"
+	<fstream>
+
+1613796752 source:/home/unroot/Desktop/cleaning/Junks/learning/project/flightSystem/fileSystemManagement/auth.cpp
+	"auth.hpp"
+	<fstream>
+	<sstream>
+	<cstring>
+	<vector>
+	"func.hpp"
+
+1613782788 /home/unroot/Desktop/cleaning/Junks/learning/project/flightSystem/fileSystemManagement/auth.hpp
+	<iostream>
+
+1613997903 /home/unroot/Desktop/cleaning/Junks/learning/project/flightSystem/fileSystemManagement/func.hpp
+	<iostream>
+	<sstream>
+	<vector>
+	"customer.hpp"
+	"ticketinfostorage.hpp"
+
+1614003743 source:/home/unroot/Desktop/cleaning/Junks/learning/project/flightSystem/fileSystemManagement/func.cpp
+	"func.hpp"
+	"customer.hpp"
+	<fstream>
+	<sstream>
+	<string>
+
+1613845592 /home/unroot/Desktop/cleaning/Junks/learning/project/flightSystem/fileSystemManagement/otherDisp.hpp
+	<iostream>
+
+1614005294 source:/home/unroot/Desktop/cleaning/Junks/learning/project/flightSystem/fileSystemManagement/otherDisp.cpp
+	"otherDisp.hpp"
+	"registration.hpp"
+	"customer.hpp"
+	"auth.hpp"
+	"func.hpp"
+	"ticketinfostorage.hpp"
+	"Booking.hpp"
+	<iostream>
+	<fstream>
+	<unistd.h>
+	<vector>
+
+1614003612 source:/home/unroot/Desktop/cleaning/Junks/learning/project/flightSystem/fileSystemManagement/Booking.cpp
+	"Booking.hpp"
+	"ticketinfostorage.hpp"
+	"func.hpp"
+	<unistd.h>
+	<fstream>
+	<sstream>
+
+1613991922 /home/unroot/Desktop/cleaning/Junks/learning/project/flightSystem/fileSystemManagement/Booking.hpp
+	<iostream>
+
+1613968884 /home/unroot/Desktop/cleaning/Junks/learning/project/flightSystem/fileSystemManagement/ticketinfostorage.hpp
+	<vector>
+	<iostream>
+
+1614003073 source:/home/unroot/Desktop/cleaning/Junks/learning/project/flightSystem/fileSystemManagement/ticketinfostorage.cpp
+	"ticketinfostorage.hpp"
+	"func.hpp"
+	<fstream>
+
